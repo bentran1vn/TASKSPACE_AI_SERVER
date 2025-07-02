@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package chat_messages;
+
+// Service definition (exposed by .NET server)
+service ChatMessagesService {
+  rpc GetChatMessages (ChatMessagesRequest) returns (ChatMessagesResponse);
+}
+
+// Request message
+message ChatMessagesRequest {
+  string filter = 1; // Optional: e.g., team ID or time range to filter messages
+}
+
+// Response message
+message ChatMessagesResponse {
+  string messages = 1; // Format: "username: message\nusername: message"
+  string date_ranges = 2; // Format: "DD/MM/YYYY - DD/MM/YYYY"
+  string error = 3; // Optional error message
+}
