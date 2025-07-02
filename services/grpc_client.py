@@ -1,3 +1,4 @@
+import os
 import grpc
 from proto_configs.chat_cofig import chat_messages_pb2, chat_messages_pb2_grpc
 from utils.date_validator import validate_date
@@ -24,7 +25,8 @@ def get_chat_messages(user_id: str, conversation_id: str, start_time: str, end_t
 
     date_ranges = f"{start_time} - {end_time}"
 
-    with grpc.insecure_channel('localhost:50051') as channel:
+    grpc_host = os.getenv('GRPC_HOST', 'localhost:50051')
+    with grpc.insecure_channel(grpc_host) as channel:
         stub = chat_messages_pb2_grpc.ChatMessagesServiceStub(channel)
         request = chat_messages_pb2.ChatMessagesRequest(
             user_id=user_id,

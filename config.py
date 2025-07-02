@@ -11,6 +11,7 @@ def setup_environment():
     api_key = os.getenv('GOOGLE_API_KEY')
     if not api_key:
         raise Exception("Khóa API Google không được tìm thấy trong biến môi trường.")
+
     return api_key
 
 
