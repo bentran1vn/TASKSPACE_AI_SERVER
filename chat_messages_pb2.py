@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x13\x63hat_messages.proto\x12\rchat_messages\"%\n\x13\x43hatMessagesRequest\x12\x0e\n\x06\x66ilter\x18\x01 \x01(\t\"L\n\x14\x43hatMessagesResponse\x12\x10\n\x08messages\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x61te_ranges\x18\x02 \x01(\t\x12\r\n\x05\x65rror\x18\x03 \x01(\t2q\n\x13\x43hatMessagesService\x12Z\n\x0fGetChatMessages\x12\".chat_messages.ChatMessagesRequest\x1a#.chat_messages.ChatMessagesResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x13\x63hat_messages.proto\x12\rchat_messages\"e\n\x13\x43hatMessagesRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x17\n\x0f\x63onversation_id\x18\x02 \x01(\t\x12\x12\n\nstart_time\x18\x03 \x01(\t\x12\x10\n\x08\x65nd_time\x18\x04 \x01(\t\"7\n\x14\x43hatMessagesResponse\x12\x10\n\x08messages\x18\x01 \x01(\t\x12\r\n\x05\x65rror\x18\x02 \x01(\t2q\n\x13\x43hatMessagesService\x12Z\n\x0fGetChatMessages\x12\".chat_messages.ChatMessagesRequest\x1a#.chat_messages.ChatMessagesResponseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -32,9 +32,9 @@ _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'chat_messages_pb2', _global
 if not _descriptor._USE_C_DESCRIPTORS:
   DESCRIPTOR._loaded_options = None
   _globals['_CHATMESSAGESREQUEST']._serialized_start=38
-  _globals['_CHATMESSAGESREQUEST']._serialized_end=75
-  _globals['_CHATMESSAGESRESPONSE']._serialized_start=77
-  _globals['_CHATMESSAGESRESPONSE']._serialized_end=153
-  _globals['_CHATMESSAGESSERVICE']._serialized_start=155
-  _globals['_CHATMESSAGESSERVICE']._serialized_end=268
+  _globals['_CHATMESSAGESREQUEST']._serialized_end=139
+  _globals['_CHATMESSAGESRESPONSE']._serialized_start=141
+  _globals['_CHATMESSAGESRESPONSE']._serialized_end=196
+  _globals['_CHATMESSAGESSERVICE']._serialized_start=198
+  _globals['_CHATMESSAGESSERVICE']._serialized_end=311
 # @@protoc_insertion_point(module_scope)

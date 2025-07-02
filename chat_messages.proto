@@ -9,12 +9,14 @@ service ChatMessagesService {
 
 // Request message
 message ChatMessagesRequest {
-  string filter = 1; // Optional: e.g., team ID or time range to filter messages
+  string user_id = 1;
+  string conversation_id = 2;
+  string start_time = 3;
+  string end_time = 4;
 }
 
 // Response message
 message ChatMessagesResponse {
   string messages = 1; // Format: "username: message\nusername: message"
-  string date_ranges = 2; // Format: "DD/MM/YYYY - DD/MM/YYYY"
-  string error = 3; // Optional error message
+  string error = 2; // Optional error message
 }
