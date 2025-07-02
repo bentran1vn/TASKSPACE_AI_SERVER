@@ -25,7 +25,7 @@ class ChatSummarizer:
     async def generate_summary(self, user_id: str, conversation_id: str, start_time: str, end_time: str):
         """Generate summary from chat messages."""
         try:
-            messages, date_ranges = get_chat_messages(user_id, conversation_id, start_time, end_time)
+            messages, date_ranges = await get_chat_messages(user_id, conversation_id, start_time, end_time)
             final_prompt = self.prompt.invoke({"messages": messages, "date_ranges": date_ranges})
             summary = self.llm.invoke(final_prompt.text)
             return {"summary": summary}
