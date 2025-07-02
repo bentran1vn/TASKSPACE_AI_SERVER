@@ -1,6 +1,6 @@
 from fastapi import HTTPException
 from langchain_core.prompts import PromptTemplate
-from grpc_client import get_chat_messages
+from services.grpc_client import get_chat_messages
 
 class ChatSummarizer:
     def __init__(self, llm):

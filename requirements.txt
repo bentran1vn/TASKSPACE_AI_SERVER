@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+grpcio
+grpcio-tools
+python-dotenv
+langchain-core
+langchain-google-genai
+pydantic
+grpc_client
