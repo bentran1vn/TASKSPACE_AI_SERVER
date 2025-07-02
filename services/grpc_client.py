@@ -1,6 +1,5 @@
 import grpc
-import chat_messages_pb2
-import chat_messages_pb2_grpc
+from proto_configs.chat_cofig import chat_messages_pb2, chat_messages_pb2_grpc
 from utils.date_validator import validate_date
 
 
