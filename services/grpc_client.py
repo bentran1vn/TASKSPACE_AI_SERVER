@@ -25,7 +25,7 @@ async def get_chat_messages(user_id: str, conversation_id: str, start_time: str,
 
     date_ranges = f"{start_time} - {end_time}"
 
-    grpc_host = os.getenv('GRPC_HOST', 'localhost:50051')
+    grpc_host = os.getenv('GRPC_HOST', 'localhost:9090')
     async with grpc.aio.insecure_channel(grpc_host) as channel:
         stub = chat_messages_pb2_grpc.ChatMessagesServiceStub(channel)
         request = chat_messages_pb2.ChatMessagesRequest(
